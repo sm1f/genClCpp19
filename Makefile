@@ -63,7 +63,8 @@ $(PRD_APP_DIR)/%.exe: $(PRD_OBJ_ALL) | MK_DBG_APP_DIR
 .PRECIOUS: $(PRD_OBJ_DIR)/%.o
 
 .PHONY: clean
-clean: DBG_clean PRD_clean
+clean: DBG_clean PRD_clean cleanSrc
+
 DBG_clean:
 	rm -f $(DEPS) $(DBG_OBJ_DIR)/*.d $(DBG_OBJ_DIR)/*.o $(DBG_APP_DIR)/*
 	rmdir --ignore-fail-on-non-empty $(DBG_OBJ_DIR) $(DBG_APP_DIR)
@@ -72,8 +73,11 @@ PRD_clean:
 	rmdir --ignore-fail-on-non-empty $(PRD_OBJ_DIR) $(PRD_APP_DIR)
 
 .PHONY: cleanForGit
-cleanForGit: clean
+cleanForGit: clean cleanSrc
+
+cleanSrc:
 	rm -f $(SRC_DIR)/*~
+
 
 printVars:
 	$(info DBG_APP_ALL $(DBG_APP_ALL))
