@@ -15,10 +15,6 @@ class CommandLineTests : public CommonTests
   CommandLineTests() {}
   virtual ~CommandLineTests() {}
   virtual bool runTests(int level) { return false; } // NYI
-
- private:
-  typedef CppBase __super;
-
 };
 
 #endif //  __CommandLineTests_H__

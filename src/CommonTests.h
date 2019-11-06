@@ -15,9 +15,7 @@ class CommonTests : public CppBase
  public:
   CommonTests() {}
   virtual ~CommonTests() {}
-  virtual bool runTests(int level) { return false; } // NYI
- private:
-  typedef CppBase __super;
+  virtual bool runTests(int level) { NYI(""); return false; } // NYI
 };
 
 #endif //  __CommonTests_H__

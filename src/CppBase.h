@@ -8,11 +8,18 @@
 
 #include "common.h"
 
+#define NYI(TEXT)                                      \
+  {                                                    \
+    this->nyi(__FILE__, __FUNCTION__, __LINE__, TEXT); \
+  }
+
 class CppBase
 {
  public:
-  CppBase() {}
-  virtual ~CppBase() {}
+  CppBase();
+  virtual ~CppBase();
+
+  virtual void nyi(string file, string fn, int line, string text);
 };
 
 #endif //  __CppBase_H__
