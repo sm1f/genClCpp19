@@ -3,13 +3,11 @@
 
 
 #include "common.h"
-//#include "CommandLineTests.h"
 
 
 int main(int argc, const char** argv)
 {
   cout << __FILE__ << " V0.0" << endl;
-
   /*
   CommandLineTests* clTests = new CommandLineTests();
   
