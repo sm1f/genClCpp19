@@ -1,0 +1,30 @@
+- demand
+  - liniar demand i.e. simple ware
+  - expected demand
+  - transfered demand
+  - bullwipe effect
+
+- cost of repair
+  - expected
+  - predicted
+  - related
+  - cost of repair * cost failure
+
+
+- sim
+  - cost of transfere is
+    - fn of
+      - item
+      - other items being transported
+      - other items not beng transported
+
+
+- cost of difference between actual and predicted
+  - failure
+  - manufacture ( time, cost, material)
+  - repair
+
+- costs should include intangables
+  - customer trust
+  - 
+  

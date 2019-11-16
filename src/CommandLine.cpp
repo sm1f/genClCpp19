@@ -6,9 +6,8 @@
 #include "CommandLine.h"
 
 
-CommandAction::CommandAction() {}
-CommandAction::~CommandAction() {}
-bool CommandAction::doAction() { return true; }
+CommandLineAction::CommandLineAction() {}
+CommandLineAction::~CommandLineAction() {}
 
 
 CommandLine::CommandLine()
@@ -20,10 +19,13 @@ CommandLine::~CommandLine()
 {
 }
 
-CommandLine* CommandLine::AddCommandWord(string name, CommandAction action)
+CommandLine* CommandLine::AddCommandWord(string name, CommandLineAction action)
 {
   word2action[name] = action;
   return this;
 }
 
-
+bool CommandLine::parseLine(int argc, string argv[])
+{
+  return false;
+}

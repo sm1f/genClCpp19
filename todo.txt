@@ -1,0 +1,40 @@
+
+
+o incromental include
+o Command Line interface
+o GUI interface
+o combined CL and GUI
+o Data Analysis
+o Sim transport module
+o config management
+o cost of expections in-accuracy
+o RETE
+  o Small data set large rule set
+  o Large data set small rule set
+o cloud interface
+o command line
+o test system
+  o test macros
+o dev macros
+o state machine
+  o gereric
+  o common cases
+o DB
+o producer / consumer model
+o pub / sub
+  o small scale
+  o large scale
+o info-centric
+o Graph interface
+  o simple model
+  o simple graphics
+  o graphic generation
+  o graphics interface
+o 3d model
+  o 3d print
+  o 3d CNC
+o generator for control code
+o Simulation
+o Make inprovements
+o boast
+o test coverage

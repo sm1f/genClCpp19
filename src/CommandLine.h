@@ -10,14 +10,14 @@
 
 #include "common.h"
 #include "CppBase.h"
+#include "Action.h"
 
 
-class CommandAction : public CppBase
+class CommandLineAction : public Action
 {
  public:
-  CommandAction();
-  virtual ~CommandAction();
-  virtual bool doAction();
+  CommandLineAction();
+  virtual ~CommandLineAction();
 };
 
 class CommandLine : public CppBase
@@ -26,9 +26,10 @@ class CommandLine : public CppBase
   CommandLine();
   virtual ~CommandLine();
 
-  virtual CommandLine* AddCommandWord(string name, CommandAction action);
+  virtual bool parseLine(int argc, string argv[]);
+  virtual CommandLine* AddCommandWord(string name, CommandLineAction action);
  protected:
-  map<string,CommandAction> word2action;
+  map<string,CommandLineAction> word2action;
 };
 
 #endif //  __CommandLine_H__
