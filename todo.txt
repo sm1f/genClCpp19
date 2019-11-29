@@ -1,7 +1,17 @@
 
 
+* Command Line interface
+  * word parsing
+  o dash parsing
+  o double dash parsing
+  o post parse actions
+
+* test system
+  * test all
+  o test macros
+  o dev macros
+
 o incromental include
-o Command Line interface
 o GUI interface
 o combined CL and GUI
 o Data Analysis
@@ -13,9 +23,6 @@ o RETE
   o Large data set small rule set
 o cloud interface
 o command line
-o test system
-  o test macros
-o dev macros
 o state machine
   o gereric
   o common cases

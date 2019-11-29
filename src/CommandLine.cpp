@@ -19,13 +19,18 @@ CommandLine::~CommandLine()
 {
 }
 
-CommandLine* CommandLine::AddCommandWord(string name, CommandLineAction action)
+CommandLine* CommandLine::AddCommandWord(string name, CommandLineActionPtr action)
 {
   word2action[name] = action;
   return this;
 }
 
 bool CommandLine::parseLine(int argc, string argv[])
+{
+  return false;
+}
+
+bool CommandLine::parseRemaindingLine(int argc, string argv[], int nextPos)
 {
   return false;
 }

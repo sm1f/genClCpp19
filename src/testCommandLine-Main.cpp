@@ -3,14 +3,13 @@
 
 
 #include "common.h"
-//#include "CommandLineTests.h"
+#include "CommandLineTests.h"
 
 
 int main(int argc, const char** argv)
 {
   cout << __FILE__ << " V0.0" << endl;
 
-  /*
   CommandLineTests* clTests = new CommandLineTests();
   
   bool result = clTests->runTests(0);
@@ -18,6 +17,5 @@ int main(int argc, const char** argv)
   cout << "Command Line tests " << (result ? "passed" : "failed") << endl;
 
   return (result ? 0 : -1);
-  */
-  return -1;
+  //  return -1;
 }

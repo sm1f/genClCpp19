@@ -19,6 +19,7 @@ class CommandLineAction : public Action
   CommandLineAction();
   virtual ~CommandLineAction();
 };
+typedef CommandLineAction* CommandLineActionPtr;
 
 class CommandLine : public CppBase
 {
@@ -27,9 +28,12 @@ class CommandLine : public CppBase
   virtual ~CommandLine();
 
   virtual bool parseLine(int argc, string argv[]);
-  virtual CommandLine* AddCommandWord(string name, CommandLineAction action);
+  virtual CommandLine* AddCommandWord(string name, CommandLineActionPtr action);
  protected:
-  map<string,CommandLineAction> word2action;
+  map<string,CommandLineActionPtr> word2action;
+
+  virtual bool parseRemaindingLine(int argc, string argv[], int nextPos);
+
 };
 
 #endif //  __CommandLine_H__

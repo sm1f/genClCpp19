@@ -7,14 +7,15 @@
 #define __CommandLineTests_H__
 
 #include "CommonTests.h"
+#include "CommandLine.h"
 
 
 class CommandLineTests : public CommonTests
 {
  public:
-  CommandLineTests() {}
+  CommandLineTests();
   virtual ~CommandLineTests() {}
-  virtual bool runTests(int level) { return false; } // NYI
+  virtual bool runTests(int level);
 };
 
 #endif //  __CommandLineTests_H__

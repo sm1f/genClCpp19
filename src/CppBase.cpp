@@ -15,7 +15,12 @@ CppBase::~CppBase()
 
 void CppBase::nyi(string file, string fn, int line, string text)
 {
-  cout << "NYI " << file << " " << fn << " " << line << " " << text << endl;
+  cout << "NYI " << file << " " << fn << ":" << line << " " << text << endl;
+}
+
+void CppBase::nfi(string file, string fn, int line, string text)
+{
+  cout << "NFI " << file << " " << fn << " " << line << " " << text << endl;
 }
 
 
