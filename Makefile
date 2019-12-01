@@ -76,7 +76,7 @@ PRD_clean:
 cleanForGit: clean cleanSrc
 
 cleanSrc:
-	rm -f $(SRC_DIR)/*~
+	rm -f $(SRC_DIR)/*~ *~
 
 
 printVars:
