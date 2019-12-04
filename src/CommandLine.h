@@ -18,6 +18,7 @@ class CommandLineAction : public Action
  public:
   CommandLineAction();
   virtual ~CommandLineAction();
+  virtual bool apply(string arg);
 };
 typedef CommandLineAction* CommandLineActionPtr;
 
@@ -33,6 +34,7 @@ class CommandLine : public CppBase
   map<string,CommandLineActionPtr> word2action;
 
   virtual bool parseRemaindingLine(int argc, string argv[], int nextPos);
+  virtual bool parsePosition(int argc, string argv[], int nextPos, string arg);
 
 };
 

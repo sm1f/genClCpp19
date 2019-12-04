@@ -7,6 +7,10 @@
 #include <memory>
 #include <string>
 
+// dont have boost yet
+//#include <boost/algorithm/string/predicate.hpp>
+//#include <boost/lexical_cast.hpp>
+
 using namespace std;
 
 /* loggin/tracing/jotting code JOT  */

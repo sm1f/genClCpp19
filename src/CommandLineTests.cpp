@@ -13,7 +13,7 @@ bool CommandLineTests::runTests(int level)
 {
   NYI("");
   return false;
-} // NYI
+}
 
 bool CommandLineTests::CheckAllFalseSans()
 {

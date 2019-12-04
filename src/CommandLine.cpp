@@ -8,6 +8,10 @@
 
 CommandLineAction::CommandLineAction() {}
 CommandLineAction::~CommandLineAction() {}
+bool CommandLineAction::apply(string arg)
+{
+  return true;
+}
 
 
 CommandLine::CommandLine()
@@ -32,5 +36,24 @@ bool CommandLine::parseLine(int argc, string argv[])
 
 bool CommandLine::parseRemaindingLine(int argc, string argv[], int nextPos)
 {
+  if (nextPos >= argc)
+    {
+      return true;
+    }
+  return parsePosition(argc, argv, nextPos, argv[nextPos]);
+}
+
+bool CommandLine::parsePosition(int argc, string argv[], int nextPos, string arg)
+{
+  string ds = "--";
+  string ss = "-";
+  if (ds.rfind(arg, 0) == 0) {
+      NFI("double -- arg:" + arg);
+  } else if (ss.rfind(arg, 0) == 0) {
+      NFI("single - arg:" + arg);
+  } else {
+      NYI("word");
+  }
+
   return false;
 }
