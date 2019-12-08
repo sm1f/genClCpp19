@@ -17,5 +17,4 @@ int main(int argc, const char** argv)
   cout << "Command Line tests " << (result ? "passed" : "failed") << endl;
 
   return (result ? 0 : -1);
-  //  return -1;
 }

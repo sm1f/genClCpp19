@@ -19,10 +19,17 @@
   }
 
 #define SNYI(TEXT) \
-  { std::cout << "NYI " << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__ << " " << TEXT << std::endl: }
+  { std::cout << "NYI " << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__ << " " << TEXT << std::endl; }
 
 #define SNFI(TEXT) \
-  { std::cout << "NFI " << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__ << " " << TEXT << std::endl: }
+  { std::cout << "NFI " << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__ << " " << TEXT << std::endl; }
+
+#define TV_S(VAR, VAL)							\
+  { std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << VAL << std::endl;}
+     
+#define TV_B(VAR) \
+  { std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << (VAR ? ": true" : ": false") << std::endl;}
+
 
 
 class CppBase

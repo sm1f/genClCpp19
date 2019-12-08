@@ -6,8 +6,6 @@
 #ifndef  __CommandLine_H__
 #define __CommandLine_H__
 
-#include <map>
-
 #include "common.h"
 #include "CppBase.h"
 #include "Action.h"

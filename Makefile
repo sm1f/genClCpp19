@@ -2,7 +2,7 @@ SRC_DIR:=src
 DBG_OBJ_DIR:=debug_obj
 DBG_APP_DIR:=debug_app
 PRD_OBJ_DIR:=obj
-PRD_APP_DIR:=app
+PRD_APP_DIR:=apps
 
 SRC_HEADERS=$(wildcard $(SRC_DIR)/*.h)
 

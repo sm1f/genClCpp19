@@ -2,16 +2,21 @@
 // All rights reserved.
 
 
-#include <stdio.h>
 #include <iostream>
+#include <map>
 #include <memory>
+#include <random>
 #include <string>
+#include <stdio.h>
+
 
 // dont have boost yet
 //#include <boost/algorithm/string/predicate.hpp>
 //#include <boost/lexical_cast.hpp>
 
 using namespace std;
+
+string random_string(std::string::size_type length);
 
 /* loggin/tracing/jotting code JOT  */
 

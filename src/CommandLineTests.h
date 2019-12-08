@@ -9,8 +9,8 @@
 #include "CommonTests.h"
 #include "CommandLine.h"
 
-typedef std::map<string,bool> TestActions;
-typedef TestActions TestActionsPtr;
+typedef std::map<string,int> TestActionCalls;
+typedef TestActionCalls* TestActionsPtr;
 
 class CommandLineTestAction : CommandLineAction
 {
@@ -25,10 +25,12 @@ class CommandLineTests : public CommonTests
   virtual ~CommandLineTests() {}
   virtual bool runTests(int level);
 
-  virtual bool CheckAllFalseSans();
+  virtual void clearResults();
+  virtual void addPossibleWords(int count);
+
+  virtual bool testWords(int possibleWordCount, int lineWordCount);
  private:
-  TestActions* actions;
-  
+  TestActionsPtr actions;
 };
 
 #endif //  __CommandLineTests_H__
