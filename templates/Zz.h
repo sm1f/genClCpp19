@@ -1,16 +1,18 @@
+// CopyRight Stephen Morrisson 2019, 2020
+// All rights reserved.
+
+// removed first lines
+// replace Zz with class name
+// replace Yy with parent class name
+
 // CopyRight Stephen Morrisson 2019
 // All rights reserved.
 
-// intended to copy and replace Zz with class name
 
 #ifndef  __Zz_H__
 #define __Zz_H__
 
-#include "common.h"
-
-class Yy
-{}
-
+#include "Yy.h"
 
 class Zz : public Yy
 {

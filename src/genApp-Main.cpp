@@ -3,6 +3,7 @@
 
 
 #include "common.h"
+#include "App.h"
 #include "CommandLine.h"
 
 
@@ -10,10 +11,9 @@ int main(int argc, const char** argv)
 {
   cout << "genApp V0.0" << endl;
 
-  //  Simple* root = new Simple();
+  App* theApp = new App();
   
-  int result = -1;
-  //int result = that.RunMain();
+  int result = theApp->runMain(argc, argv);
 
   if (result != 0)
     {
