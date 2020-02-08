@@ -6,6 +6,7 @@
   2 App
     3 Sim
       4 Sim1
+      4 HwSim
   2 CommandLine
   2 CommonTests
     3 CommandLineTests

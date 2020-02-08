@@ -1,19 +1,19 @@
 // CopyRight Stephen Morrisson 2020
 // All rights reserved.
 
-#ifndef  __SIM1_H__
-#define __SIM1_H__
+#ifndef  __HW_SIM_V1_H__
+#define __HW_SIM_V1_H__
 
 #include "Sim.h"
 
-class Sim1 : public Sim
+class HwSimV1 : public Sim
 {
  public:
-  Sim1();
-  virtual ~Sim1();
+  HwSimV1();
+  virtual ~HwSimV1();
 
   virtual bool setup(int argc, const char** argv);
 };
 
-#endif //  __SIM1_H__
+#endif //  __HW_SIM_V1_H__
 
