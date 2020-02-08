@@ -4,13 +4,13 @@
 #ifndef  __SIM1_H__
 #define __SIM1_H__
 
-#include "Sim.h"
+#include "App.h"
 
-class Sim1 : public Sim
+class Sim : public App
 {
  public:
-  Sim1();
-  virtual ~Sim1();
+  Sim();
+  virtual ~Sim();
 
   virtual bool setup(int argc, const char** argv);
 };
