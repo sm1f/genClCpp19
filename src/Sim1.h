@@ -4,10 +4,9 @@
 #ifndef  __SIM1_H__
 #define __SIM1_H__
 
-#include "common.h"
-#include "CppBase.h"
+#include "App.h"
 
-class Sim1 : public CppBase
+class Sim1 : public App
 {
  public:
   Sim1();
