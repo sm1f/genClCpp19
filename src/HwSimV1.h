@@ -13,6 +13,8 @@ class HwSimV1 : public Sim
   virtual ~HwSimV1();
 
   virtual bool setup(int argc, const char** argv);
+
+  virtual bool blink();
 };
 
 #endif //  __HW_SIM_V1_H__

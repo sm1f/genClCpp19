@@ -17,3 +17,10 @@ bool HwSimV1::setup(int argc, const char** argv)
   return true;
 }
 
+bool HwSimV1::blink()
+{
+  NYI("")
+  
+  return true;
+}
+
