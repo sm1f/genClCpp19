@@ -12,9 +12,21 @@ HwSimV1::~HwSimV1()
 {
 }
 
-bool HwSimV1::setup(int argc, const char** argv)
+bool HwSimV1::appConig(int argc, const char** argv)
 {
   return true;
+}
+
+bool HwSimV1::appShowConfig()
+{
+  cout << "Config" << endl;
+  return true;
+}
+
+bool HwSimV1::appRun()
+{
+  NFI("");
+  return blink();
 }
 
 bool HwSimV1::blink()

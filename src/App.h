@@ -15,8 +15,15 @@ class App : public CppBase
   App();
   virtual ~App();
 
- virtual int runMain(int argc, const char** argv);
- virtual bool setup(int argc, const char** argv);
+ virtual int runApp(int argc, const char** argv);
+ virtual bool appConfig(int argc, const char** argv);
+ virtual bool appShowConfig();
+ virtual bool appSetup();
+ virtual bool appRun();
+ virtual bool appResolveResult();
+ virtual bool appCleanup(bool followWithSameApp, bool followWithDiffApp);
+
+ 
  private:
   typedef CppBase __super;
 

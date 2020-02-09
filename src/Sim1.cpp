@@ -12,7 +12,7 @@ Sim1::~Sim1()
 {
 }
 
-bool Sim1::setup(int argc, const char** argv)
+bool Sim1::appConfig(int argc, const char** argv)
 {
   return true;
 }

@@ -12,7 +12,9 @@ class HwSimV1 : public Sim
   HwSimV1();
   virtual ~HwSimV1();
 
-  virtual bool setup(int argc, const char** argv);
+  virtual bool appConig(int argc, const char** argv);
+  virtual bool appShowConfig();
+  virtual bool appRun();
 
   virtual bool blink();
 };

@@ -13,7 +13,7 @@ Sim::~Sim()
 {
 }
 
-bool Sim::setup(int argc, const char** argv)
+bool Sim::appConfig(int argc, const char** argv)
 {
   return true;
 }

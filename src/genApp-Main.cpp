@@ -13,7 +13,7 @@ int main(int argc, const char** argv)
 
   App* theApp = new App();
   
-  int result = theApp->runMain(argc, argv);
+  int result = theApp->runApp(argc, argv);
 
   if (result != 0)
     {

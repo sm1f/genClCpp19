@@ -11,7 +11,7 @@ int main(int argc, const char** argv)
 
   HwSimV1* theApp = new HwSimV1();
   
-  int result = theApp->runMain(argc, argv);
+  int result = theApp->runApp(argc, argv);
 
   if (result != 0)
     {
