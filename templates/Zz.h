@@ -9,8 +9,8 @@
 // All rights reserved.
 
 
-#ifndef  __Zz_H__
-#define __Zz_H__
+#ifndef  __ZZ_H__
+#define __ZZ_H__
 
 #include "Yy.h"
 
@@ -24,5 +24,5 @@ class Zz : public Yy
 
 };
 
-#endif //  __Zz_H__
+#endif //  __ZZ_H__
 

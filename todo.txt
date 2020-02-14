@@ -1,4 +1,13 @@
 
+* TimeSim
+  o add logging
+    o general
+    o specific events
+  o add events
+    o add
+    o advance time
+    o think about async debug
+
 * Sim1
   - 
 * Command Line interface
