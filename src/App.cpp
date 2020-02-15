@@ -24,22 +24,22 @@ int App::runApp(int argc, const char* argv[])
   }
   
   if (! appConfig(argc, args)) {
-    cout << "appConfig failed" << endl;
+    cout << "App->appConfig failed" << endl;
     return -1;
   } else if (! appShowConfig()) {
-    cout << "appShowConfig failed" << endl;
+    cout << "App->appShowConfig failed" << endl;
     return -2;
   } else if (! appSetup()) {
-    cout << "appSetup failed" << endl;
+    cout << "App->appSetup failed" << endl;
     return -3;
   } else if (! appRun()) {
-    cout << "appRun failed" << endl;
+    cout << "App->appRun failed" << endl;
     return -4;
   } else if (! appResolveResult()) {
-    cout << "appResolveResult failed" << endl;
+    cout << "App->appResolveResult failed" << endl;
     return -5;
   } else if (! appCleanup(false, false)) {
-    cout << "appCleanup failed" << endl;
+    cout << "App->appCleanup failed" << endl;
     return -6;
   }
       
@@ -48,7 +48,9 @@ int App::runApp(int argc, const char* argv[])
 
 bool App::appConfig(int argc, string* argv)
 {
-  return cLine->parseLine(argc, argv);
+  bool result = cLine->parseLine(argc, argv);
+  CTV_false(result);
+  return result;
 }
 
 

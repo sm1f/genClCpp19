@@ -19,6 +19,8 @@ class HwSimV1 : public Sim
   virtual bool appRun();
 
   virtual bool blink(HwFactory* factory, TimeSim* timeSim);
+ private:
+  typedef Sim __super;
 };
 
 #endif //  __HW_SIM_V1_H__

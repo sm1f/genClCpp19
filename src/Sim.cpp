@@ -13,8 +13,8 @@ Sim::~Sim()
 {
 }
 
-bool Sim::appConfig(int argc, const char** argv)
+bool Sim::appConfig(int argc, string* argv)
 {
-  return true;
+  return __super::appConfig(argc, argv);
 }
 

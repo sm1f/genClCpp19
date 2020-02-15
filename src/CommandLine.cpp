@@ -32,7 +32,7 @@ CommandLine::~CommandLine()
 {
 }
 
-CommandLine* CommandLine::AddCommandWord(string name, CommandLineActionPtr action)
+CommandLine* CommandLine::addCommandWord(string name, CommandLineActionPtr action)
 {
   word2action[name] = action;
   return this;
@@ -40,7 +40,14 @@ CommandLine* CommandLine::AddCommandWord(string name, CommandLineActionPtr actio
 
 bool CommandLine::parseLine(int argc, string* argv)
 {
-  return false;
+  bool result = false;
+  if (argc == 1) {
+    result = true;
+  } else {
+    TV_V(argc);
+    NYI(" argc not zero");
+  }
+  return result;
 }
 
 bool CommandLine::parseRemaindingLine(int argc, string* argv, int nextPos)

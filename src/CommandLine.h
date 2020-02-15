@@ -41,7 +41,7 @@ class CommandLine : public CppBase
   virtual ~CommandLine();
 
   virtual bool parseLine(int argc, string* argv);
-  virtual CommandLine* AddCommandWord(string name, CommandLineActionPtr action);
+  virtual CommandLine* addCommandWord(string name, CommandLineActionPtr action);
  protected:
   map<string,CommandLineActionPtr> word2action;
 

@@ -31,11 +31,25 @@
 #define SNFI(TEXT) \
   { std::cout << "NFI " << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__ << " " << TEXT << std::endl; }
 
-#define TV_S(VAR, VAL)							\
-  { std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << VAL << std::endl;}
-     
+// ------------- trace verbose
+
+#define TV()							\
+  { std::cout << "TV " << __FILE__ << ":" << __LINE__ << std::endl;}
+
 #define TV_B(VAR) \
   { std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << (VAR ? ": true" : ": false") << std::endl;}
+
+#define TV_V(VAR)							\
+  { std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << ": " << VAR << std::endl;}
+
+// ------------- conditional trace verbose
+
+//  if false then print stuff.
+#define CTV_false(VAR) \
+  { if (! VAR) { \
+    std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << (VAR ? ": true" : ": false") << std::endl; } \
+  }
+
 
 
 

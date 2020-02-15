@@ -15,7 +15,7 @@ HwSimV1::~HwSimV1()
 
 bool HwSimV1::appConig(int argc, string* argv)
 {
-  //  V_true(addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
+  V_true(cLine->addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
   
   NFI("");
   return true;
@@ -23,7 +23,7 @@ bool HwSimV1::appConig(int argc, string* argv)
 
 bool HwSimV1::appShowConfig()
 {
-  cout << "Config" << endl;
+  NYI("");
   return true;
 }
 
