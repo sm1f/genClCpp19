@@ -13,8 +13,11 @@ HwSimV1::~HwSimV1()
 {
 }
 
-bool HwSimV1::appConig(int argc, const char** argv)
+bool HwSimV1::appConig(int argc, string* argv)
 {
+  //  V_true(addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
+  
+  NFI("");
   return true;
 }
 

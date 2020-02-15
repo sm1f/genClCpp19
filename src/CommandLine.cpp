@@ -13,6 +13,15 @@ bool CommandLineAction::apply(string arg)
   return true;
 }
 
+UnImplCommandLineAction::UnImplCommandLineAction(string argString)
+  : __super(), arg(argString)
+{
+}
+
+UnImplCommandLineAction* UnImplCommandLineAction::Create(string argString)
+{
+  return new UnImplCommandLineAction(argString);
+}
 
 CommandLine::CommandLine()
   : CppBase()
@@ -29,12 +38,12 @@ CommandLine* CommandLine::AddCommandWord(string name, CommandLineActionPtr actio
   return this;
 }
 
-bool CommandLine::parseLine(int argc, string argv[])
+bool CommandLine::parseLine(int argc, string* argv)
 {
   return false;
 }
 
-bool CommandLine::parseRemaindingLine(int argc, string argv[], int nextPos)
+bool CommandLine::parseRemaindingLine(int argc, string* argv, int nextPos)
 {
   if (nextPos >= argc)
     {
@@ -43,7 +52,7 @@ bool CommandLine::parseRemaindingLine(int argc, string argv[], int nextPos)
   return parsePosition(argc, argv, nextPos, argv[nextPos]);
 }
 
-bool CommandLine::parsePosition(int argc, string argv[], int nextPos, string arg)
+bool CommandLine::parsePosition(int argc, string* argv, int nextPos, string arg)
 {
   string ds = "--";
   string ss = "-";

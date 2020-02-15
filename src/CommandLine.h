@@ -14,11 +14,25 @@
 class CommandLineAction : public Action
 {
  public:
-  CommandLineAction();
+  static CommandLineAction createCommandLineAction();
   virtual ~CommandLineAction();
   virtual bool apply(string arg);
+ protected:
+  CommandLineAction();
 };
 typedef CommandLineAction* CommandLineActionPtr;
+
+class UnImplCommandLineAction : public CommandLineAction {
+ public:
+  static UnImplCommandLineAction* Create(string argString);
+ protected:
+  UnImplCommandLineAction(string argString);
+ private:
+  typedef CommandLineAction __super;
+
+ protected:
+  string arg;
+};
 
 class CommandLine : public CppBase
 {
@@ -26,13 +40,13 @@ class CommandLine : public CppBase
   CommandLine();
   virtual ~CommandLine();
 
-  virtual bool parseLine(int argc, string argv[]);
+  virtual bool parseLine(int argc, string* argv);
   virtual CommandLine* AddCommandWord(string name, CommandLineActionPtr action);
  protected:
   map<string,CommandLineActionPtr> word2action;
 
-  virtual bool parseRemaindingLine(int argc, string argv[], int nextPos);
-  virtual bool parsePosition(int argc, string argv[], int nextPos, string arg);
+  virtual bool parseRemaindingLine(int argc, string* argv, int nextPos);
+  virtual bool parsePosition(int argc, string* argv, int nextPos, string arg);
 
 };
 

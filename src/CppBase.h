@@ -1,12 +1,19 @@
-// CopyRight Stephen Morrisson 2019
+// CopyRight Stephen Morrisson 2019, 2020
 // All rights reserved.
 
-// intended to copy and replace Zz with class name
+
+
 
 #ifndef  __CppBase_H__
 #define __CppBase_H__
 
 #include "common.h"
+
+//  --------- validate macros
+#define V_true(EXP) \
+  { if (! (EXP)) { cerr << "Validate_true failed for exp: " # EXP << endl; } }
+
+// todo: add comments
 
 #define NYI(TEXT)                                      \
   {                                                    \

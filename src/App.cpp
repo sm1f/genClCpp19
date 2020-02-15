@@ -6,7 +6,8 @@
 #include "App.h"
 
 App::App()
-  : CppBase()
+  : CppBase(),
+    cLine(new CommandLine())
 {
 }
 
@@ -14,9 +15,15 @@ App::~App()
 {
 }
 
-int App::runApp(int argc, const char** argv)
+int App::runApp(int argc, const char* argv[])
 {
-  if (! appConfig(argc, argv)) {
+  string args[argc];
+  
+  for (int i = 0; i < argc; i++) {
+    args[i] = string(argv[i]);
+  }
+  
+  if (! appConfig(argc, args)) {
     cout << "appConfig failed" << endl;
     return -1;
   } else if (! appShowConfig()) {
@@ -39,7 +46,12 @@ int App::runApp(int argc, const char** argv)
   return 0;
 }
 
-bool App::appConfig(int argc, const char** argv) { return true; }
+bool App::appConfig(int argc, string* argv)
+{
+  return cLine->parseLine(argc, argv);
+}
+
+
 bool App::appShowConfig() { return true; }
 bool App::appSetup() { return true; }
 bool App::appRun() { return true; }

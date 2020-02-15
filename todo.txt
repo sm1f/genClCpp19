@@ -9,12 +9,17 @@
     o think about async debug
 
 * Sim1
-  - 
+  -
+
+* clear up empty constructors and destructors
+
 * Command Line interface
+  * add hier under base (word, dash, double dash, ??)
   * word parsing
   o dash parsing
   o double dash parsing
   o post parse actions
+  ? should commandline be changed to command line parser
 
 * test system
   * test all
