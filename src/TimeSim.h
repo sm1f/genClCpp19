@@ -18,6 +18,10 @@ class TimeSim : public CppBase
   virtual ~TimeSim();
 
   virtual void reset(long startTime);
+
+  template<class T>
+    void push(long nextTime, T* event);
+  
  private:
   long currentTime;
   

@@ -18,3 +18,9 @@ void TimeSim::reset(long newStartTime)
 {
   currentTime = newStartTime;
 }
+
+template<class T>
+void TimeSim::push(long nextTime, T* event)
+{
+  NYI("push");
+}
