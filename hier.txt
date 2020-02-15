@@ -10,5 +10,9 @@
   2 CommandLine
   2 CommonTests
     3 CommandLineTests
+  2 Event
+  2 State
+    3 StateMachineState
+  2 TimeSim
 
 
