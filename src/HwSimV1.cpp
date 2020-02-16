@@ -33,11 +33,12 @@ bool HwSimV1::appRun()
 
   HwFactory* factory = new HwFactory();
   TimeSim* timeSim = factory->CreateTimeSim();
-  return blink(factory, timeSim);
+  return blink(factory);
 }
 
-bool HwSimV1::blink(HwFactory* factory, TimeSim* timeSim)
+bool HwSimV1::blink(HwFactory* factory)
 {
+  TimeSim* timeSim = factory->CreateTimeSim();
   timeSim->reset(0);
   
   NFI("");

@@ -11,8 +11,13 @@
   2 CommonTests
     3 CommandLineTests
   2 Event
+  2 Factory
+    3 ElectronicFactory
   2 State
     3 StateMachineState
+  2 Thing
+    3 Connector
+    3 Led
   2 TimeSim
 
 

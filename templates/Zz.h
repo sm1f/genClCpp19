@@ -1,4 +1,4 @@
-// CopyRight Stephen Morrisson 2019, 2020
+// CopyRight Stephen Morrisson 2020
 // All rights reserved.
 
 // removed first lines
