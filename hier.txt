@@ -19,9 +19,10 @@
     3 Blink
   2 Thing
     3 ElectronicThing
-      4 Connector
+      4 ElectronicConnector
       4 Led
-      4 PowerSupply5v
+      4 PowerSupply
+        5 PowerSupply5v
   2 TimeSim
 
 =============================================

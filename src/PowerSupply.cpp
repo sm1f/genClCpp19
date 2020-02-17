@@ -2,14 +2,14 @@
 // All rights reserved.
 
 
-#include "Connector.h"
+#include "PowerSupply.h"
 
-Connector::Connector(string nameString)
+PowerSupply::PowerSupply(string nameString)
   : __super(nameString)
 {
 }
 
-Connector::~Connector()
+PowerSupply::~PowerSupply()
 {
 }
 

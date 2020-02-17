@@ -16,7 +16,7 @@ class ElectronicFactory : public Factory
   virtual ~ElectronicFactory();
 
   virtual Led* createLed(string nameString);
-  virtual PowerSupply5v* createPowerSupply5V(string nameString);
+  virtual PowerSupply5v* createPowerSupply5v(string nameString);
 
  private:
   typedef Factory __super;

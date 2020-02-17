@@ -18,7 +18,7 @@ Led* ElectronicFactory::createLed(string nameString)
   return new Led(nameString);
 }
 
-PowerSupply5v* ElectronicFactory::createPowerSupply5V(string nameString)
+PowerSupply5v* ElectronicFactory::createPowerSupply5v(string nameString)
 {
   return new PowerSupply5v(nameString);
 }
