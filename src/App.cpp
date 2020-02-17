@@ -15,15 +15,10 @@ App::~App()
 {
 }
 
-int App::runApp(int argc, const char* argv[])
+int App::runApp(int argc, const char** argv)
 {
-  string args[argc];
-  
-  for (int i = 0; i < argc; i++) {
-    args[i] = string(argv[i]);
-  }
-  
-  if (! appConfig(argc, args)) {
+  if (! cLine->addArgs(argc, argv)) {
+  } else if (! appConfig(cLine)) {
     cout << "App->appConfig failed" << endl;
     return -1;
   } else if (! appShowConfig()) {
@@ -46,11 +41,9 @@ int App::runApp(int argc, const char* argv[])
   return 0;
 }
 
-bool App::appConfig(int argc, string* argv)
+bool App::appConfig(CommandLine* cLine)
 {
-  bool result = cLine->parseLine(argc, argv);
-  CTV_false(result);
-  return result;
+  return true;
 }
 
 

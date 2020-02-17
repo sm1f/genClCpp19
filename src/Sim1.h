@@ -12,7 +12,7 @@ class Sim1 : public Sim
   Sim1();
   virtual ~Sim1();
 
-  virtual bool appConfig(int argc, const char** argv);
+  virtual bool appConfig(CommandLine* cLine);
 };
 
 #endif //  __SIM1_H__

@@ -38,10 +38,24 @@ CommandLine* CommandLine::addCommandWord(string name, CommandLineActionPtr actio
   return this;
 }
 
-bool CommandLine::parseLine(int argc, string* argv)
+bool CommandLine::addArgs(int argc, const char** argv)
 {
+  for (int i = 0; i < argc; i++)
+    {
+      string arg = argv[i];
+      args.push_back(arg);
+    }
+  
+  return true;
+}
+
+bool CommandLine::parseLine()
+{
+  int argc = args.size();
   bool result = false;
-  if (argc == 1) {
+  if (argc == 0) {
+    result = true;
+  } else if (argc == 1) {
     result = true;
   } else {
     TV_V(argc);

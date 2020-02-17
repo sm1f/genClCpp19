@@ -11,7 +11,7 @@ class Sim : public App
  public:
   Sim();
   virtual ~Sim();
-  virtual bool appConfig(int argc, string* argv);
+  virtual bool appConfig(CommandLine* cLine);
  private:
   typedef App __super;
 };

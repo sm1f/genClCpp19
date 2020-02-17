@@ -8,6 +8,7 @@
 #include <random>
 #include <string>
 #include <stdio.h>
+#include <vector>
 
 
 // dont have boost yet
@@ -17,6 +18,8 @@
 using namespace std;
 
 string random_string(std::string::size_type length);
+
+typedef vector<string> Strings;
 
 /* loggin/tracing/jotting code JOT  */
 

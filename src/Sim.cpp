@@ -13,8 +13,8 @@ Sim::~Sim()
 {
 }
 
-bool Sim::appConfig(int argc, string* argv)
+bool Sim::appConfig(CommandLine* cLine)
 {
-  return __super::appConfig(argc, argv);
+  return __super::appConfig(cLine);
 }
 
