@@ -6,6 +6,7 @@
 #define __POWER_SUPPLY_H__
 
 #include "ElectronicThing.h"
+#include "ElectronicConnection.h"
 
 class PowerSupply : public ElectronicThing
 {
@@ -13,10 +14,14 @@ class PowerSupply : public ElectronicThing
   PowerSupply(string nameString);
   virtual ~PowerSupply();
 
+  //  virtual ElectronicConnection* get5v();
+
+  // protected:
+  //  ElectronicConnection* power;
+  //  ElectronicConnection* ground;
   
  private:
   typedef ElectronicThing __super;
-
 };
 
 #endif //  __POWER_SUPPLY_5V_H__

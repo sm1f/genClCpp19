@@ -13,4 +13,16 @@ ElectronicConnection::~ElectronicConnection()
 {
 }
 
+// --------------------------- Electronic Connection point
+
+ElectronicConnectionPoint::ElectronicConnectionPoint(string nameString)
+  : __super(nameString)
+{
+}
+
+ElectronicConnectionPoint::~ElectronicConnectionPoint()
+{
+}
+
+
 

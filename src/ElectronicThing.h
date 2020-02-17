@@ -7,11 +7,16 @@
 
 #include "Thing.h"
 
+//class electronicFactory;
+
 class ElectronicThing : public Thing
 {
  public:
   ElectronicThing(string nameString);
   virtual ~ElectronicThing();
+
+  // protected:
+  //  ElectronicFactory* factory;
  private:
   typedef Thing __super;
 

@@ -12,11 +12,23 @@ class ElectronicConnection : public ElectronicThing
   ElectronicConnection(string nameString);
   virtual ~ElectronicConnection();
 
-  
  private:
   typedef ElectronicThing __super;
-
 };
+
+class ElectronicConnectionPoint : public ElectronicThing
+{
+ public:
+  ElectronicConnectionPoint(string nameString);
+  virtual ~ElectronicConnectionPoint();
+
+ protected:
+  vector<ElectronicConnection> connections;
+
+ private:
+  typedef ElectronicThing __super;
+};
+
 
 #endif //  __ELECTRONIC_CONNECTION_H__
 
