@@ -19,10 +19,11 @@
     3 Blink
   2 Thing
     3 ElectronicThing
-      4 ElectronicConnector
+      4 ElectronicConnection
       4 Led
       4 PowerSupply
         5 PowerSupply5v
+      4 Wire
   2 TimeSim
 
 =============================================
@@ -37,6 +38,7 @@ CommandLineTests
 CommonTests
 Connector
 CppBase
+ElectronicConnection
 ElectronicFactory
   - generic factory for creating electronic things
 ElectronicThing
@@ -56,5 +58,9 @@ StateMachineState
 Story
 Thing
 TimeSim
+Wire
+  - used to connect electronic things
+  - end have nominal names inConn, and outConn
+    - to make it easier to simulate if broken wire
 
 
