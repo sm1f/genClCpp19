@@ -13,4 +13,8 @@ Factory::~Factory()
 {
 }
 
+TimeSim* Factory::createTimeSim()
+{
+  return new TimeSim();
+}
 

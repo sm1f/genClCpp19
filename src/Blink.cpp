@@ -13,4 +13,15 @@ Blink::~Blink()
 {
 }
 
+bool Blink::applyBlink(ElectronicFactory* factory, TimeSim* timeSim)
+{
+  V_NotNull(factory);
+  V_NotNull(timeSim);
+
+  Led* led = factory->createLed("blinkLed");
+
+  NYI("");
+  return false;
+}
+
 

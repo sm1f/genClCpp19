@@ -8,7 +8,6 @@
 #include "Factory.h"
 #include "Led.h"
 #include "PowerSupply5v.h"
-#include "TimeSim.h"
 
 class ElectronicFactory : public Factory
 {
@@ -16,9 +15,9 @@ class ElectronicFactory : public Factory
   ElectronicFactory();
   virtual ~ElectronicFactory();
 
-  virtual TimeSim* CreateTimeSim();
-  virtual Led* CreateLed(string nameString);
-  virtual PowerSupply5v* CreatePowerSupply5V(string nameString);
+  virtual Led* createLed(string nameString);
+  virtual PowerSupply5v* createPowerSupply5V(string nameString);
+
  private:
   typedef Factory __super;
 

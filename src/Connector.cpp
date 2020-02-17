@@ -5,7 +5,7 @@
 #include "Connector.h"
 
 Connector::Connector(string nameString)
-  : Thing(nameString)
+  : __super(nameString)
 {
 }
 

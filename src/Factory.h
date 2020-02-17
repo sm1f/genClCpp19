@@ -6,12 +6,16 @@
 #define __FACTORY_H__
 
 #include "CppBase.h"
+#include "TimeSim.h"
 
 class Factory : public CppBase
 {
  public:
   Factory();
   virtual ~Factory();
+
+  virtual TimeSim* createTimeSim();
+
  private:
   typedef CppBase __super;
 

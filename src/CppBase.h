@@ -13,6 +13,9 @@
 #define V_true(EXP) \
   { if (! (EXP)) { cerr << "Validate_true failed for exp: " # EXP << endl; } }
 
+#define V_NotNull(EXP) \
+  { if (NULL == EXP) { cerr << "Validate_notNull failed for exp: " # EXP << endl; } }
+
 // todo: add comments
 
 #define NYI(TEXT)                                      \

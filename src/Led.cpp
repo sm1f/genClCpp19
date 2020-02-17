@@ -5,7 +5,7 @@
 #include "Led.h"
 
 Led::Led(string nameString)
-  : Thing(nameString)
+  : __super(nameString)
 {
 }
 

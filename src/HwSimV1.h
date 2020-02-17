@@ -5,7 +5,7 @@
 #define __HW_SIM_V1_H__
 
 #include "Sim.h"
-#include "HwFactory.h"
+#include "ElectronicFactory.h"
 #include "TimeSim.h"
 
 class HwSimV1 : public Sim
@@ -18,7 +18,7 @@ class HwSimV1 : public Sim
   virtual bool appShowConfig();
   virtual bool appRun();
 
-  virtual bool blink(HwFactory* factory);
+  virtual bool blink(ElectronicFactory* factory);
  private:
   typedef Sim __super;
 };

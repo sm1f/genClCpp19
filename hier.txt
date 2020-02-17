@@ -18,8 +18,42 @@
   2 Story
     3 Blink
   2 Thing
-    3 Connector
-    3 Led
+    3 ElectronicThing
+      4 Connector
+      4 Led
+      4 PowerSupply5v
   2 TimeSim
+
+=============================================
+
+Action
+App
+Blink
+CommandLine
+CommandLineAction
+CommandLineTestAction
+CommandLineTests
+CommonTests
+Connector
+CppBase
+ElectronicFactory
+  - generic factory for creating electronic things
+ElectronicThing
+Event
+Factory
+  - sets up timeSim 
+  - generic for creating items.
+HwSim
+Led
+PowerSupply5v
+Sim
+Sim1
+State
+StateMachineState
+  - used to follow state machine pattern
+    - should only have single instances and almost no instance vars
+Story
+Thing
+TimeSim
 
 

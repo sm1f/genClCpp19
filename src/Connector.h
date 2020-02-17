@@ -4,9 +4,9 @@
 #ifndef  __CONNECTOR_H__
 #define __CONNECTOR_H__
 
-#include "Thing.h"
+#include "ElectronicThing.h"
 
-class Connector : public Thing
+class Connector : public ElectronicThing
 {
  public:
   Connector(string nameString);
@@ -14,7 +14,7 @@ class Connector : public Thing
 
   
  private:
-  typedef Thing __super;
+  typedef ElectronicThing __super;
 
 };
 

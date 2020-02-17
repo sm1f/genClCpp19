@@ -4,15 +4,15 @@
 #ifndef  __LED_H__
 #define __LED_H__
 
-#include "Thing.h"
+#include "ElectronicThing.h"
 
-class Led : public Thing
+class Led : public ElectronicThing
 {
  public:
   Led(string nameString);
   virtual ~Led();
  private:
-  typedef Thing __super;
+  typedef ElectronicThing __super;
 
 };
 

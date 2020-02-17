@@ -13,17 +13,12 @@ ElectronicFactory::~ElectronicFactory()
 {
 }
 
-TimeSim* ElectronicFactory::CreateTimeSim()
-{
-  return new TimeSim();
-}
-
-Led* ElectronicFactory::CreateLed(string nameString)
+Led* ElectronicFactory::createLed(string nameString)
 {
   return new Led(nameString);
 }
 
-PowerSupply5v* ElectronicFactory::CreatePowerSupply5V(string nameString)
+PowerSupply5v* ElectronicFactory::createPowerSupply5V(string nameString)
 {
   return new PowerSupply5v(nameString);
 }

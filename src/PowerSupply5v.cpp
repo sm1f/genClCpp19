@@ -5,7 +5,7 @@
 #include "PowerSupply5v.h"
 
 PowerSupply5v::PowerSupply5v(string nameString)
-  : Thing(nameString)
+  : __super(nameString)
 {
 }
 

@@ -3,7 +3,7 @@
 
 
 #include "HwSimV1.h"
-#include "HwFactory.h"
+#include "Blink.h"
 
 HwSimV1::HwSimV1()
 {
@@ -31,18 +31,17 @@ bool HwSimV1::appRun()
 {
   NFI("");
 
-  HwFactory* factory = new HwFactory();
-  TimeSim* timeSim = factory->CreateTimeSim();
+  ElectronicFactory* factory = new ElectronicFactory();
+  TimeSim* timeSim = factory->createTimeSim();
   return blink(factory);
 }
 
-bool HwSimV1::blink(HwFactory* factory)
+bool HwSimV1::blink(ElectronicFactory* factory)
 {
-  TimeSim* timeSim = factory->CreateTimeSim();
+  TimeSim* timeSim = factory->createTimeSim();
   timeSim->reset(0);
-  
-  NFI("");
+  Blink* blink = new Blink();
 
-  return true;
+  return blink->applyBlink(factory, timeSim);
 }
 

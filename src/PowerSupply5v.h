@@ -5,9 +5,9 @@
 #ifndef  __POWER_SUPPLY_5V_H__
 #define __POWER_SUPPLY_5V_H__
 
-#include "Thing.h"
+#include "ElectronicThing.h"
 
-class PowerSupply5v : public Thing
+class PowerSupply5v : public ElectronicThing
 {
  public:
   PowerSupply5v(string nameString);
@@ -15,7 +15,7 @@ class PowerSupply5v : public Thing
 
   
  private:
-  typedef Thing __super;
+  typedef ElectronicThing __super;
 
 };
 
