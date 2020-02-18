@@ -10,12 +10,12 @@ Thing::Thing(string nameString)
 {
 }
 
-Thing::~Thing()
-{
-}
-
 Thing* Thing::create(string nameString)
 {
   return new Thing(nameString);
 }
 
+string Thing::getName()
+{
+  return name;
+}

@@ -19,6 +19,8 @@ class ElectronicFactory : public Factory
   virtual Led* createLed(string ledName);
   virtual PowerSupply5v* createPowerSupply5v(string supplyName);
   virtual Wire* createWire(string wireName, string endNameA, string endNameB);
+  virtual Wire* createWireConnection(string wireName, string endNameA, string endNameB,
+			   ElectronicConnection* connectionA, ElectronicConnection* connectionB);
 
   virtual ElectronicConnection* createConnection(string objName, string connName);
   

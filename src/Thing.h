@@ -11,7 +11,9 @@ class Thing : public CppBase
 {
  public:
   static Thing* create(string nameString);
-  virtual ~Thing();
+  virtual ~Thing() {}
+
+  virtual string getName();
  protected:
   Thing(string nameString);
 

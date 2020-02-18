@@ -5,8 +5,8 @@
 #include "Wire.h"
 
 
-Wire::Wire(string nameString, ElectronicConnection* connectionA, ElectronicConnection* connectionB)
-  : ElectronicThing(name), endA(connectionA), endB(connectionB)
+Wire::Wire(string wireName, ElectronicConnection* connectionA, ElectronicConnection* connectionB)
+  : ElectronicThing(wireName), endA(connectionA), endB(connectionB)
 {
 }
 

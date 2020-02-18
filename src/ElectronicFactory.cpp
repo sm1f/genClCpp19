@@ -35,6 +35,17 @@ Wire* ElectronicFactory::createWire(string wireName, string endNameA, string end
   return new Wire(wireName, aConn, bConn);
 }
 
+Wire* ElectronicFactory::createWireConnection(string wireName, string endNameA, string endNameB,
+			   ElectronicConnection* connectionA, ElectronicConnection* connectionB)
+{
+  Wire* result = createWire(wireName, endNameA, endNameB);
+  connect(connectionA->getName(), connectionA, result->getEndA());
+  connect(connectionB->getName(), result->getEndB(), connectionB);
+
+  return result;
+}
+
+
 //------------------ connention
 ElectronicConnection* ElectronicFactory::createConnection(string objName, string connName)
 {
