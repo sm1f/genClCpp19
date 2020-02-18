@@ -4,8 +4,8 @@
 
 #include "ElectronicConnection.h"
 
-ElectronicConnection::ElectronicConnection(string nameString)
-  : __super(nameString)
+ElectronicConnection::ElectronicConnection(string baseString, string endString)
+  : __super(makeName(baseString, endString))
 {
 }
 
@@ -13,6 +13,15 @@ ElectronicConnection::~ElectronicConnection()
 {
 }
 
+string ElectronicConnection::makeName(string baseString, string endString)
+{
+  string result;
+  result.append(baseString);
+  result.append(".");
+  result.append(endString);
+  return result;
+}
+	    
 // --------------------------- Electronic Connection point
 
 ElectronicConnectionPoint::ElectronicConnectionPoint(string nameString)
@@ -24,5 +33,10 @@ ElectronicConnectionPoint::~ElectronicConnectionPoint()
 {
 }
 
+ElectronicConnectionPoint* ElectronicConnectionPoint::addConnection(ElectronicConnection* that)
+{
+  connections.push_back(that);
+  return this;
+}
 
 

@@ -1,25 +1,25 @@
 // CopyRight Stephen Morrisson 2020
 // All rights reserved.
 
-// removed first lines
-// replace Wire with class name
-// replace ElectronicThing with parent class name
-
-// CopyRight Stephen Morrisson 2019
-// All rights reserved.
-
 
 #ifndef  __WIRE_H__
 #define __WIRE_H__
 
 #include "ElectronicThing.h"
+#include "ElectronicConnection.h"
 
 class Wire : public ElectronicThing
 {
  public:
-  Wire(string nameString);
+  Wire(string nameString, ElectronicConnection* connectionA, ElectronicConnection* connectionB);
   virtual ~Wire();
 
+  //  virtual ElectronicConnection* getEndA();
+  //  virtual ElectronicConnection* getEndB();
+ protected:
+  ElectronicConnection* endA;
+  ElectronicConnection* endB;
+  
   //  virtual Wire* addIn(Electron);
  private:
   typedef ElectronicThing __super;

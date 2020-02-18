@@ -21,9 +21,11 @@ bool Blink::applyBlink(ElectronicFactory* factory, TimeSim* timeSim)
   Led* led = factory->createLed("blinkLed");
   PowerSupply* power = factory->createPowerSupply5v("Power5v");
 
-  //  Wire* factory->createWire("power2led", power->get5v(), led->powerIn());
+  Wire* wire = factory->createWire("power2led", "src", "dest");
+  //  factory->connect("connect1", power->get5v(), led->powerIn());
+
+  NFI("");
   
-  NYI("");
   return false;
 }
 

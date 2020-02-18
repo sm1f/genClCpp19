@@ -9,9 +9,11 @@
 class ElectronicConnection : public ElectronicThing
 {
  public:
-  ElectronicConnection(string nameString);
+  ElectronicConnection(string baseString, string endString);
   virtual ~ElectronicConnection();
 
+  static string makeName(string baseString, string endString);
+  
  private:
   typedef ElectronicThing __super;
 };
@@ -22,8 +24,9 @@ class ElectronicConnectionPoint : public ElectronicThing
   ElectronicConnectionPoint(string nameString);
   virtual ~ElectronicConnectionPoint();
 
+  virtual ElectronicConnectionPoint* addConnection(ElectronicConnection* that);
  protected:
-  vector<ElectronicConnection> connections;
+  vector<ElectronicConnection*> connections;
 
  private:
   typedef ElectronicThing __super;

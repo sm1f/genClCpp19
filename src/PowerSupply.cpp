@@ -6,7 +6,8 @@
 
 PowerSupply::PowerSupply(string nameString)
   : __super(nameString)
-    //, power(NULL), ground(NULL)
+    //, power(NULL)
+    //, ground(NULL)
 {
 }
 

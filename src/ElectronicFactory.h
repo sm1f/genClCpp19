@@ -8,6 +8,7 @@
 #include "Factory.h"
 #include "Led.h"
 #include "PowerSupply5v.h"
+#include "Wire.h"
 
 class ElectronicFactory : public Factory
 {
@@ -17,7 +18,12 @@ class ElectronicFactory : public Factory
 
   virtual Led* createLed(string nameString);
   virtual PowerSupply5v* createPowerSupply5v(string nameString);
+  virtual Wire* createWire(string wireName, string endNameA, string endNameB);
 
+  virtual ElectronicConnectionPoint* connect(string nameString, ElectronicConnection* connectionA, ElectronicConnection* connectionB);
+  virtual ElectronicConnectionPoint* createConnection(string nameString);
+  virtual ElectronicConnectionPoint* addConnection(ElectronicConnectionPoint* point, ElectronicConnection* connection);
+  
  private:
   typedef Factory __super;
 

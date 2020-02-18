@@ -14,10 +14,10 @@ class PowerSupply : public ElectronicThing
   PowerSupply(string nameString);
   virtual ~PowerSupply();
 
-  //  virtual ElectronicConnection* get5v();
+  //virtual ElectronicConnection* get5v();
 
-  // protected:
-  //  ElectronicConnection* power;
+ protected:
+  //ElectronicConnection* power;
   //  ElectronicConnection* ground;
   
  private:
