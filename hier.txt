@@ -10,6 +10,7 @@
   2 CommandLine
   2 CommonTests
     3 CommandLineTests
+  2 ElectronicConnection
   2 Event
   2 Factory
     3 ElectronicFactory
@@ -19,7 +20,6 @@
     3 Blink
   2 Thing
     3 ElectronicThing
-      4 ElectronicConnection
       4 Led
       4 PowerSupply
         5 PowerSupply5v

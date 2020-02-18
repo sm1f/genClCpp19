@@ -4,13 +4,13 @@
 
 #include "PowerSupply5v.h"
 
-PowerSupply5v::PowerSupply5v(string nameString)
-  : __super(nameString)
+PowerSupply5v::PowerSupply5v(string nameString,
+			     ElectronicConnection* groundConn,
+			     ElectronicConnection* power5vConn)
+  : __super(nameString, groundConn)
 {
+  power5v = power5vConn;
 }
 
-PowerSupply5v::~PowerSupply5v()
-{
-}
 
 

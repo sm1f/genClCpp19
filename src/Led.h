@@ -5,12 +5,21 @@
 #define __LED_H__
 
 #include "ElectronicThing.h"
+#include "ElectronicConnection.h"
 
 class Led : public ElectronicThing
 {
  public:
-  Led(string nameString);
-  virtual ~Led();
+  Led(string ledName, ElectronicConnection* powerConn, ElectronicConnection* groundConn);
+  virtual ~Led() {}
+
+  virtual ElectronicConnection* powerIn();
+  virtual ElectronicConnection* groundOut();
+  
+ protected:
+  ElectronicConnection* fromPower;
+  ElectronicConnection* toGround;
+  
  private:
   typedef ElectronicThing __super;
 

@@ -6,13 +6,20 @@
 
 
 Wire::Wire(string nameString, ElectronicConnection* connectionA, ElectronicConnection* connectionB)
-  : ElectronicThing(name)
+  : ElectronicThing(name), endA(connectionA), endB(connectionB)
 {
-  NFI("");
 }
 
-Wire::~Wire()
+ElectronicConnection* Wire::getEndA()
 {
+  return endA;
 }
+
+ElectronicConnection* Wire::getEndB()
+{
+  return endB;
+}
+
+
 
 

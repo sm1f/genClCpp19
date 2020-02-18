@@ -13,14 +13,18 @@ ElectronicFactory::~ElectronicFactory()
 {
 }
 
-Led* ElectronicFactory::createLed(string nameString)
+Led* ElectronicFactory::createLed(string ledName)
 {
-  return new Led(nameString);
+  return new Led(ledName,
+		 new ElectronicConnection(ledName, "powerConn"),
+		 new ElectronicConnection(ledName, "groundConn"));
 }
 
-PowerSupply5v* ElectronicFactory::createPowerSupply5v(string nameString)
+PowerSupply5v* ElectronicFactory::createPowerSupply5v(string supplyName)
 {
-  return new PowerSupply5v(nameString);
+  return new PowerSupply5v(supplyName,
+			   new ElectronicConnection(supplyName, "ground"),
+			   new ElectronicConnection(supplyName, "5v"));
 }
 
 Wire* ElectronicFactory::createWire(string wireName, string endNameA, string endNameB)
@@ -31,20 +35,26 @@ Wire* ElectronicFactory::createWire(string wireName, string endNameA, string end
   return new Wire(wireName, aConn, bConn);
 }
 
-ElectronicConnectionPoint* ElectronicFactory::connect(string nameString,
+//------------------ connention
+ElectronicConnection* ElectronicFactory::createConnection(string objName, string connName)
+{
+  return new ElectronicConnection(objName, connName);
+}
+
+//------------------ connention point
+ElectronicConnectionPoint* ElectronicFactory::createConnectionPoint(string nameString)
+{
+  return new ElectronicConnectionPoint(nameString);
+}
+
+ElectronicConnectionPoint* ElectronicFactory::connect(string pointName,
 				   ElectronicConnection* connectionA,
 				   ElectronicConnection* connectionB)
 {
-  ElectronicConnectionPoint* result = createConnection(nameString);
+  ElectronicConnectionPoint* result = createConnectionPoint(pointName);
   addConnection(result, connectionA);
   addConnection(result, connectionB);
   return result;
-}
-
-
-ElectronicConnectionPoint* ElectronicFactory::createConnection(string nameString)
-{
-  return new ElectronicConnectionPoint(nameString);
 }
 
 ElectronicConnectionPoint* ElectronicFactory::addConnection(ElectronicConnectionPoint* point,

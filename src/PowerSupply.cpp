@@ -4,25 +4,18 @@
 
 #include "PowerSupply.h"
 
-PowerSupply::PowerSupply(string nameString)
-  : __super(nameString)
-    //, power(NULL)
-    //, ground(NULL)
+PowerSupply::PowerSupply(string nameString, ElectronicConnection* groundConn)
+  : __super(nameString), ground(groundConn), power5v(NULL)
 {
 }
 
-PowerSupply::~PowerSupply()
-{
-}
-
-/*
 ElectronicConnection* PowerSupply::get5v()
 {
-  if (power == NULL)
-    {
-      NYI("");
-    }
-  return power;
+  return power5v;
 }
-*/
+
+ElectronicConnection* PowerSupply::getGround()
+{
+  return ground;
+}
 

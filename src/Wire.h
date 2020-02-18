@@ -12,10 +12,10 @@ class Wire : public ElectronicThing
 {
  public:
   Wire(string nameString, ElectronicConnection* connectionA, ElectronicConnection* connectionB);
-  virtual ~Wire();
+  virtual ~Wire() {}
 
-  //  virtual ElectronicConnection* getEndA();
-  //  virtual ElectronicConnection* getEndB();
+  virtual ElectronicConnection* getEndA();
+  virtual ElectronicConnection* getEndB();
  protected:
   ElectronicConnection* endA;
   ElectronicConnection* endB;

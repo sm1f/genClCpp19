@@ -16,12 +16,14 @@ class ElectronicFactory : public Factory
   ElectronicFactory();
   virtual ~ElectronicFactory();
 
-  virtual Led* createLed(string nameString);
-  virtual PowerSupply5v* createPowerSupply5v(string nameString);
+  virtual Led* createLed(string ledName);
+  virtual PowerSupply5v* createPowerSupply5v(string supplyName);
   virtual Wire* createWire(string wireName, string endNameA, string endNameB);
 
-  virtual ElectronicConnectionPoint* connect(string nameString, ElectronicConnection* connectionA, ElectronicConnection* connectionB);
-  virtual ElectronicConnectionPoint* createConnection(string nameString);
+  virtual ElectronicConnection* createConnection(string objName, string connName);
+  
+  virtual ElectronicConnectionPoint* createConnectionPoint(string pointName);
+  virtual ElectronicConnectionPoint* connect(string pointName, ElectronicConnection* connectionA, ElectronicConnection* connectionB);
   virtual ElectronicConnectionPoint* addConnection(ElectronicConnectionPoint* point, ElectronicConnection* connection);
   
  private:

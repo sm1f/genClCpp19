@@ -4,9 +4,9 @@
 #ifndef  __ELECTRONIC_CONNECTION_H__
 #define __ELECTRONIC_CONNECTION_H__
 
-#include "ElectronicThing.h"
+#include "Thing.h"
 
-class ElectronicConnection : public ElectronicThing
+class ElectronicConnection : public Thing
 {
  public:
   ElectronicConnection(string baseString, string endString);
@@ -15,10 +15,10 @@ class ElectronicConnection : public ElectronicThing
   static string makeName(string baseString, string endString);
   
  private:
-  typedef ElectronicThing __super;
+  typedef Thing __super;
 };
 
-class ElectronicConnectionPoint : public ElectronicThing
+class ElectronicConnectionPoint : public Thing
 {
  public:
   ElectronicConnectionPoint(string nameString);
@@ -29,7 +29,7 @@ class ElectronicConnectionPoint : public ElectronicThing
   vector<ElectronicConnection*> connections;
 
  private:
-  typedef ElectronicThing __super;
+  typedef Thing __super;
 };
 
 

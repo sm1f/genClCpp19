@@ -11,14 +11,15 @@
 class PowerSupply : public ElectronicThing
 {
  public:
-  PowerSupply(string nameString);
-  virtual ~PowerSupply();
+  PowerSupply(string nameString, ElectronicConnection* groundConn);
+  virtual ~PowerSupply() {}
 
-  //virtual ElectronicConnection* get5v();
+  virtual ElectronicConnection* get5v();
+  virtual ElectronicConnection* getGround();
 
  protected:
-  //ElectronicConnection* power;
-  //  ElectronicConnection* ground;
+  ElectronicConnection* ground;
+  ElectronicConnection* power5v;
   
  private:
   typedef ElectronicThing __super;
