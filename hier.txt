@@ -18,6 +18,7 @@
     3 StateMachineState
   2 Story
     3 Blink
+  2 StoryDictionary
   2 Thing
     3 ElectronicThing
       4 Led
