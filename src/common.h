@@ -17,9 +17,10 @@
 
 using namespace std;
 
-string random_string(std::string::size_type length);
-
 typedef vector<string> Strings;
+
+string string_random(std::string::size_type length);
+bool string_startsWith(const string& haystack, const string& needle);
 
 /* loggin/tracing/jotting code JOT  */
 

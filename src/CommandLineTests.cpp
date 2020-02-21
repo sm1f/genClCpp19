@@ -29,7 +29,7 @@ void CommandLineTests::clearResults()
 void CommandLineTests::addPossibleWords(int count)
 {
   for (int i = 0; i < count; i++) {
-    string word = random_string(5);
+    string word = string_random(5);
     NFI(" result" + word);
   }
 }

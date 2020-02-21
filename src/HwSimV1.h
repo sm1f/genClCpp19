@@ -14,11 +14,16 @@ class HwSimV1 : public Sim
   HwSimV1();
   virtual ~HwSimV1();
 
+  virtual bool appSetupCL(CommandLine* cLine);
   virtual bool appConfig(CommandLine* cLine);
   virtual bool appShowConfig();
   virtual bool appRun();
 
   virtual bool blink(ElectronicFactory* factory);
+
+ protected:
+  vector<ElectronicThing> parts;
+
  private:
   typedef Sim __super;
 };

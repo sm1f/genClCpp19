@@ -9,8 +9,6 @@
 #include "CppBase.h"
 #include "CommandLine.h"
 
-typedef string strings[];
-
 class App : public CppBase
 {
  public:
@@ -18,6 +16,7 @@ class App : public CppBase
   virtual ~App();
 
  virtual int runApp(int argc, const char** argv);
+ virtual bool appSetupCL(CommandLine* cLine);
  virtual bool appConfig(CommandLine* cLine);
  virtual bool appShowConfig();
  virtual bool appSetup();

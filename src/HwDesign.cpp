@@ -9,11 +9,30 @@ HwDesign::HwDesign()
 {
 }
 
+bool HwDesign::Apply(ElectronicFactory* factory)
+{
+  NYI("");
+  return false;
+}
+
+bool LedTrivialDesign::Apply(ElectronicFactory* factory)
+{
+  NYI("");
+  return false;
+}
 
 HwDesignDictionary::HwDesignDictionary()
   : CppBase()
 {
 }
+
+bool HwDesignDictionary::applyDesign(string designName, ElectronicFactory* factory, vector<ElectronicThing> parts)
+{
+  NYI("");
+  return false;
+}
+
+
 
 
 

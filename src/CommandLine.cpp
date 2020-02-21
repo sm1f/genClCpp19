@@ -52,38 +52,24 @@ bool CommandLine::addArgs(int argc, const char** argv)
 bool CommandLine::parseLine()
 {
   int argc = args.size();
-  bool result = false;
-  if (argc == 0) {
-    result = true;
-  } else if (argc == 1) {
-    result = true;
-  } else {
-    TV_V(argc);
-    NYI(" argc not zero");
-  }
-  return result;
-}
+  int argIndex = 0;
 
-bool CommandLine::parseRemaindingLine(int argc, string* argv, int nextPos)
-{
-  if (nextPos >= argc)
+  TV_V(argc);
+  for (int argIndex = 0; argIndex < argc; argIndex++)
     {
-      return true;
+      string arg = args[argIndex];
+      TV_V(arg);
+
+      if (string_startsWith(arg, doubleDash)) {
+	NYI("double dash");
+      } else if (string_startsWith(arg, doubleDash)) {
+	NYI("double dash");
+      } else {
+	NYI("word");
+      }
+      NFI("");
     }
-  return parsePosition(argc, argv, nextPos, argv[nextPos]);
+  return true;
 }
 
-bool CommandLine::parsePosition(int argc, string* argv, int nextPos, string arg)
-{
-  string ds = "--";
-  string ss = "-";
-  if (ds.rfind(arg, 0) == 0) {
-      NFI("double -- arg:" + arg);
-  } else if (ss.rfind(arg, 0) == 0) {
-      NFI("single - arg:" + arg);
-  } else {
-      NYI("word");
-  }
 
-  return false;
-}

@@ -40,16 +40,16 @@ class CommandLine : public CppBase
   CommandLine();
   virtual ~CommandLine();
 
+  virtual CommandLine* addCommandWord(string name, CommandLineActionPtr action);
+
   virtual bool addArgs(int argc, const char** argv);
   virtual bool parseLine();
-  virtual CommandLine* addCommandWord(string name, CommandLineActionPtr action);
+
  protected:
   map<string,CommandLineActionPtr> word2action;
   Strings args;
-
-  virtual bool parseRemaindingLine(int argc, string* argv, int nextPos);
-  virtual bool parsePosition(int argc, string* argv, int nextPos, string arg);
-
+  const string doubleDash = "--";
+  const string SingleDash = "-";
 };
 
 #endif //  __CommandLine_H__

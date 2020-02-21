@@ -7,6 +7,9 @@ alias mhw="make; apps/hwSim.exe"
 alias mBlink="make; apps/hwSim.exe blink"
 alias maBlink="make clean; make; apps/hwSim.exe blink"
 
+alias mLed="make; apps/hwSim.exe led_trival"
+alias maLed="make clean; make; apps/hwSim.exe led_trival"
+
 
 alias runNoArgs="apps/genApp.exe; apps/hwSim.exe; apps/sim1.exe; apps/testAll.exe; apps/testCommandLine.exe; apps/hwSim.exe"
 alias runWithArgs="apps/hwSim.exe blink"

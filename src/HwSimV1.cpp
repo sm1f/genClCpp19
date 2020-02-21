@@ -14,9 +14,16 @@ HwSimV1::~HwSimV1()
 {
 }
 
+bool HwSimV1::appSetupCL(CommandLine* cLine)
+{
+  V_true(cLine->addCommandWord("led_trivial", UnImplCommandLineAction::Create("led_trivialg")));
+  V_true(cLine->addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
+  NFI("");
+  return true;
+}
+
 bool HwSimV1::appConfig(CommandLine* cLine)
 {
-  V_true(cLine->addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
   NFI("");
   return true;
 }
@@ -29,10 +36,17 @@ bool HwSimV1::appShowConfig()
 
 bool HwSimV1::appRun()
 {
-  NFI("");
-
   ElectronicFactory* factory = new ElectronicFactory();
   TimeSim* timeSim = factory->createTimeSim();
+  vector<ElectronicThing> parts;
+
+  HwDesignDictionary* designDictionary = new HwDesignDictionary();
+
+  designDictionary->applyDesign("led_trivial", factory, parts);
+  NFI("");
+
+  //!!!!!!!!!!
+  
   return blink(factory);
 }
 
