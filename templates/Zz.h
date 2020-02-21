@@ -18,10 +18,9 @@ class Zz : public Yy
 {
  public:
   Zz();
-  virtual ~Zz();
+  virtual ~Zz() {}
  private:
   typedef Yy __super;
-
 };
 
 #endif //  __ZZ_H__

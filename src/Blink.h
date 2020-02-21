@@ -13,7 +13,6 @@ class Blink : public Story
   Blink();
   virtual ~Blink();
   virtual bool applyBlink(ElectronicFactory* factory, TimeSim* timeSim);
-
   
  private:
   typedef Story __super;

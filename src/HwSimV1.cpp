@@ -3,6 +3,7 @@
 
 
 #include "HwSimV1.h"
+#include "HwDesign.h"
 #include "Blink.h"
 
 HwSimV1::HwSimV1()
@@ -13,10 +14,9 @@ HwSimV1::~HwSimV1()
 {
 }
 
-bool HwSimV1::appConig(int argc, string* argv)
+bool HwSimV1::appConfig(CommandLine* cLine)
 {
   V_true(cLine->addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
-  
   NFI("");
   return true;
 }

@@ -18,6 +18,8 @@ App::~App()
 int App::runApp(int argc, const char** argv)
 {
   if (! cLine->addArgs(argc, argv)) {
+    cout << "cLine->addArgs failed" << endl;
+    return -7;
   } else if (! appConfig(cLine)) {
     cout << "App->appConfig failed" << endl;
     return -1;
@@ -45,7 +47,6 @@ bool App::appConfig(CommandLine* cLine)
 {
   return true;
 }
-
 
 bool App::appShowConfig() { return true; }
 bool App::appSetup() { return true; }

@@ -14,7 +14,7 @@ class HwSimV1 : public Sim
   HwSimV1();
   virtual ~HwSimV1();
 
-  virtual bool appConig(int argc, string* argv);
+  virtual bool appConfig(CommandLine* cLine);
   virtual bool appShowConfig();
   virtual bool appRun();
 
