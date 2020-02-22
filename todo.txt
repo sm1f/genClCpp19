@@ -1,4 +1,9 @@
 
+!!!! fix command line: not parsing args 
+
+* Fix led_trivial to use 3v power
+* remove Blink.h and Blink.cpp?
+
 * TimeSim
   o add logging
     o general

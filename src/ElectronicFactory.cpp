@@ -15,16 +15,22 @@ ElectronicFactory::~ElectronicFactory()
 
 Led* ElectronicFactory::createLed(string ledName)
 {
-  return new Led(ledName,
-		 new ElectronicConnection(ledName, "powerConn"),
-		 new ElectronicConnection(ledName, "groundConn"));
+  Led* result =
+    new Led(ledName,
+	    new ElectronicConnection(ledName, "powerConn"),
+	    new ElectronicConnection(ledName, "groundConn"));
+  created.push_back(result);
+  return result;
 }
 
 PowerSupply5v* ElectronicFactory::createPowerSupply5v(string supplyName)
 {
-  return new PowerSupply5v(supplyName,
-			   new ElectronicConnection(supplyName, "ground"),
-			   new ElectronicConnection(supplyName, "5v"));
+  PowerSupply5v* result =
+    new PowerSupply5v(supplyName,
+		      new ElectronicConnection(supplyName, "ground"),
+		      new ElectronicConnection(supplyName, "5v"));
+  created.push_back(result);
+  return result;  
 }
 
 Wire* ElectronicFactory::createWire(string wireName, string endNameA, string endNameB)
@@ -32,7 +38,9 @@ Wire* ElectronicFactory::createWire(string wireName, string endNameA, string end
   ElectronicConnection* aConn = new ElectronicConnection(wireName, endNameA);
   ElectronicConnection* bConn = new ElectronicConnection(wireName, endNameB);
 
-  return new Wire(wireName, aConn, bConn);
+  Wire* result = new Wire(wireName, aConn, bConn);
+  created.push_back(result);
+  return result;  
 }
 
 Wire* ElectronicFactory::createWireConnection(string wireName, string endNameA, string endNameB,

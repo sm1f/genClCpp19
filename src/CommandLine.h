@@ -34,6 +34,18 @@ class UnImplCommandLineAction : public CommandLineAction {
   string arg;
 };
 
+class SetStringVarCommandLineAction : public CommandLineAction {
+ public:
+  SetStringVarCommandLineAction(string argString, string& varToSet);
+  virtual ~SetStringVarCommandLineAction() {}
+ private:
+  string word;
+  string& var;
+  
+  typedef CommandLineAction __super;
+};
+
+
 class CommandLine : public CppBase
 {
  public:

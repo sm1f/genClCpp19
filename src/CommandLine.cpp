@@ -23,6 +23,11 @@ UnImplCommandLineAction* UnImplCommandLineAction::Create(string argString)
   return new UnImplCommandLineAction(argString);
 }
 
+SetStringVarCommandLineAction::SetStringVarCommandLineAction(string argString, string& varToSet)
+  : word(argString), var(varToSet)
+{
+}
+
 CommandLine::CommandLine()
   : CppBase()
 {

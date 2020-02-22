@@ -5,30 +5,55 @@
 #include "HwDesign.h"
 
 HwDesign::HwDesign()
-  : CppBase()
+  : __super()
 {
 }
 
-bool HwDesign::Apply(ElectronicFactory* factory)
+bool HwDesign::apply(ElectronicFactory* factory)
 {
   NYI("");
   return false;
 }
 
-bool LedTrivialDesign::Apply(ElectronicFactory* factory)
+LedTrivialDesign::LedTrivialDesign()
+  : __super()
 {
-  NYI("");
-  return false;
+}
+				    
+
+bool LedTrivialDesign::apply(ElectronicFactory* factory)
+{
+  Led* led = factory->createLed("blinkLed");
+  PowerSupply5v* power = factory->createPowerSupply5v("Power5v");
+  factory->createWireConnection("power2led", "src", "dest",
+				power->get5v(), led->powerIn());
+  factory->createWireConnection("led2ground", "src", "dest",
+				led->powerIn(), power->getGround());
+  return true;
 }
 
 HwDesignDictionary::HwDesignDictionary()
-  : CppBase()
+  : __super()
 {
+  mapName2Design["led_trivial"] = new LedTrivialDesign();
 }
 
-bool HwDesignDictionary::applyDesign(string designName, ElectronicFactory* factory, vector<ElectronicThing> parts)
+bool HwDesignDictionary::applyDesign(string designName, ElectronicFactory* factory)
 {
-  NYI("");
+  String2HwDesign::iterator it = mapName2Design.find(designName);
+  if (it == mapName2Design.end()) {
+    cout << "Error:  Hw design not found: " << designName << endl;
+
+    cout << "mapName2Design content size: " << mapName2Design.size() << endl;
+    for (String2HwDesign::iterator it2 = mapName2Design.begin();  it2 != mapName2Design.end(); ++it2) {
+      cout << "  " << it2->first << endl;
+    }
+    
+  } else {
+    HwDesign* hw = it->second;
+    return hw->apply(factory);
+  }
+
   return false;
 }
 

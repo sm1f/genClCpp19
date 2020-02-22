@@ -27,6 +27,9 @@ class ElectronicFactory : public Factory
   virtual ElectronicConnectionPoint* createConnectionPoint(string pointName);
   virtual ElectronicConnectionPoint* connect(string pointName, ElectronicConnection* connectionA, ElectronicConnection* connectionB);
   virtual ElectronicConnectionPoint* addConnection(ElectronicConnectionPoint* point, ElectronicConnection* connection);
+
+ protected:
+  vector<ElectronicThing*> created;
   
  private:
   typedef Factory __super;

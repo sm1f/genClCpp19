@@ -22,6 +22,7 @@ class HwSimV1 : public Sim
   virtual bool blink(ElectronicFactory* factory);
 
  protected:
+  string hwDesignName;
   vector<ElectronicThing> parts;
 
  private:

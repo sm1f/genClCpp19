@@ -7,6 +7,7 @@
 #include "Blink.h"
 
 HwSimV1::HwSimV1()
+  : __super(), hwDesignName("default")
 {
 }
 
@@ -16,8 +17,8 @@ HwSimV1::~HwSimV1()
 
 bool HwSimV1::appSetupCL(CommandLine* cLine)
 {
-  V_true(cLine->addCommandWord("led_trivial", UnImplCommandLineAction::Create("led_trivialg")));
-  V_true(cLine->addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
+  V_true(cLine->addCommandWord("led_trivial", new SetStringVarCommandLineAction("led_trivial", hwDesignName)));
+  //  V_true(cLine->addCommandWord("blink", UnImplCommandLineAction::Create("blink")));
   NFI("");
   return true;
 }
@@ -38,11 +39,10 @@ bool HwSimV1::appRun()
 {
   ElectronicFactory* factory = new ElectronicFactory();
   TimeSim* timeSim = factory->createTimeSim();
-  vector<ElectronicThing> parts;
 
   HwDesignDictionary* designDictionary = new HwDesignDictionary();
 
-  designDictionary->applyDesign("led_trivial", factory, parts);
+  designDictionary->applyDesign(hwDesignName, factory);
   NFI("");
 
   //!!!!!!!!!!

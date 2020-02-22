@@ -14,20 +14,23 @@ class HwDesign : public CppBase
   HwDesign();
   virtual ~HwDesign() {}
 
-  virtual bool Apply(ElectronicFactory* factory);
+  virtual bool apply(ElectronicFactory* factory);
  private:
   typedef CppBase __super;
 };
 
 class LedTrivialDesign : public HwDesign
 {
+ public:
   LedTrivialDesign();
   virtual ~LedTrivialDesign() {}
 
-  virtual bool Apply(ElectronicFactory* factory);
+  virtual bool apply(ElectronicFactory* factory);
  private:
   typedef HwDesign __super;
 };
+
+typedef map<string, HwDesign*> String2HwDesign;
 
 class HwDesignDictionary : public CppBase
 {
@@ -35,10 +38,10 @@ class HwDesignDictionary : public CppBase
   HwDesignDictionary();
   virtual ~HwDesignDictionary() {}
 
-  virtual bool applyDesign(string designName, ElectronicFactory* factory, vector<ElectronicThing> parts);
+  virtual bool applyDesign(string designName, ElectronicFactory* factory);
 
  private:
-  map<string, HwDesign> mapName2Design;
+  String2HwDesign mapName2Design;
   
   typedef CppBase __super;
 };
