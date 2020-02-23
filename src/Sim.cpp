@@ -5,7 +5,7 @@
 #include "Sim.h"
 
 Sim::Sim()
-  : App()
+  : App(), simStarted(false), simFinished(false), simPassed(false)
 {
 }
 

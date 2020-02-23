@@ -46,7 +46,9 @@ bool HwSimV1::appRun()
   NFI("");
 
   //!!!!!!!!!!
+  // startSim();
+  // setResult(?);
   
-  return false;
+  return true;
 }
 
