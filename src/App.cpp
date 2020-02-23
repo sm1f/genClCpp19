@@ -23,6 +23,9 @@ int App::runApp(int argc, const char** argv)
   } else if (! cLine->addArgs(argc, argv)) {
     cout << "cLine->addArgs failed" << endl;
     return -7;
+  } else if (! cLine->parseLine()) {
+    cout << "cLine->parseLine failed" << endl;
+    return -8;
   } else if (! appConfig(cLine)) {
     cout << "App->appConfig failed" << endl;
     return -1;

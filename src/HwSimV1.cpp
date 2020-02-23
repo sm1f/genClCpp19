@@ -47,15 +47,6 @@ bool HwSimV1::appRun()
 
   //!!!!!!!!!!
   
-  return blink(factory);
-}
-
-bool HwSimV1::blink(ElectronicFactory* factory)
-{
-  TimeSim* timeSim = factory->createTimeSim();
-  timeSim->reset(0);
-  Blink* blink = new Blink();
-
-  return blink->applyBlink(factory, timeSim);
+  return false;
 }
 

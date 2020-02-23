@@ -74,11 +74,11 @@ bool CommandLine::parseLine()
   int argIndex = 0;
   CommandLineActionPtr action = NULL;
 
-  TV_V(argc);
-  for (int argIndex = 0; argIndex < argc; argIndex++)
+  //  TV_V(argc);
+  for (int argIndex = 1; (argIndex < argc) && result; argIndex++)
     {
       string arg = args[argIndex];
-      TV_V(arg);
+      //  TV_V(arg);
 
       if (string_startsWith(arg, doubleDash)) {
 	NYI("double dash");
@@ -89,7 +89,6 @@ bool CommandLine::parseLine()
       } else {
 	NFI("word");
       }
-      NFI("");
     }
   return result;
 }

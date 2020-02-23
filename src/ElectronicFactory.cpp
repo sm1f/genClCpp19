@@ -19,7 +19,7 @@ Led* ElectronicFactory::createLed(string ledName)
     new Led(ledName,
 	    new ElectronicConnection(ledName, "powerConn"),
 	    new ElectronicConnection(ledName, "groundConn"));
-  created.push_back(result);
+  addPart(result);
   return result;
 }
 
@@ -29,7 +29,7 @@ PowerSupply5v* ElectronicFactory::createPowerSupply5v(string supplyName)
     new PowerSupply5v(supplyName,
 		      new ElectronicConnection(supplyName, "ground"),
 		      new ElectronicConnection(supplyName, "5v"));
-  created.push_back(result);
+  addPart(result);
   return result;  
 }
 
@@ -39,7 +39,7 @@ Wire* ElectronicFactory::createWire(string wireName, string endNameA, string end
   ElectronicConnection* bConn = new ElectronicConnection(wireName, endNameB);
 
   Wire* result = new Wire(wireName, aConn, bConn);
-  created.push_back(result);
+  addPart(result);
   return result;  
 }
 
@@ -83,5 +83,9 @@ ElectronicConnectionPoint* ElectronicFactory::addConnection(ElectronicConnection
   return point;
 }
 
+void ElectronicFactory::addPart(ElectronicThing* part)
+{
+  
+}
 
 

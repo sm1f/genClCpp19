@@ -19,11 +19,8 @@ class HwSimV1 : public Sim
   virtual bool appShowConfig();
   virtual bool appRun();
 
-  virtual bool blink(ElectronicFactory* factory);
-
  protected:
   string hwDesignName;
-  vector<ElectronicThing> parts;
 
  private:
   typedef Sim __super;
