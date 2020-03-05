@@ -12,8 +12,8 @@ class Sim : public App
   Sim();
   virtual ~Sim();
   virtual bool appConfig(CommandLine* cLine);
-  virtual void startSim();
-  virtual void setResult(bool passed);
+  virtual bool simStart();
+  virtual bool simSetResult(bool passed);
  protected:
   bool simStarted;
   bool simFinished;

@@ -13,8 +13,20 @@ Sim::~Sim()
 {
 }
 
+bool Sim::simStart()
+{
+  simStarted = true;
+  return true;
+}
+
 bool Sim::appConfig(CommandLine* cLine)
 {
   return __super::appConfig(cLine);
+}
+
+bool Sim::simSetResult(bool passed)
+{
+  simPassed = passed;
+  return passed;
 }
 
