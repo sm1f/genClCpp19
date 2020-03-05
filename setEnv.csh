@@ -15,3 +15,6 @@ alias runNoArgs="apps/genApp.exe; apps/hwSim.exe; apps/sim1.exe; apps/testAll.ex
 alias runWithArgs="apps/hwSim.exe blink"
 alias runAll="runNoArgs; runWithArgs"
 alias maAll="make clean; make; runAll;"
+
+alias mGW="make; apps/gw2020.exe;"
+alias maGW="make clean; make; apps/gw2020.exe;"
