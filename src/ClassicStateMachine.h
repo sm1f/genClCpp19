@@ -7,14 +7,17 @@
 
 #include "CppBase.h"
 
-class ClassicStateMachine : public CppBase
+class ClassicStateMachineUtility : public CppBase
 {
  public:
-  ClassicStateMachine();
-  virtual ~ClassicStateMachine() {}
+  ClassicStateMachineUtility();
+  virtual ~ClassicStateMachineUtility() {}
  private:
   typedef CppBase __super;
 };
+
+//template<InputEnum, StateEnum, OutputEnum>
+//  class Classic
 
 #endif //  __CLASSIC_STATE_MACHINE_H__
 

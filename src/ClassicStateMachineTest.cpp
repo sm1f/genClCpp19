@@ -14,5 +14,10 @@ bool ClassicStateMachineTest::runTests(int level)
   return true;
 }
 
+int ClassicStateMachineTest::runApp(int argc, const char** argv)
+{
+  NYI("");
+  return -1;
+}
 
 

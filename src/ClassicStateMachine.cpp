@@ -4,7 +4,7 @@
 
 #include "ClassicStateMachine.h"
 
-ClassicStateMachine::ClassicStateMachine()
+ClassicStateMachineUtility::ClassicStateMachineUtility()
   : CppBase()
 {
 }

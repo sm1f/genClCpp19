@@ -18,3 +18,6 @@ alias maAll="make clean; make; runAll;"
 
 alias mGW="make; apps/gw2020.exe;"
 alias maGW="make clean; make; apps/gw2020.exe;"
+
+alias mSM="make; apps/stateMachine.exe;"
+alias maSM="make clean; make; apps/stateMachine.exe;"

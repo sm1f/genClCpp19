@@ -12,6 +12,7 @@ class ClassicStateMachineTest : public CommonTests
   ClassicStateMachineTest();
   virtual ~ClassicStateMachineTest() {}
   virtual bool runTests(int level);
+  virtual int runApp(int argc, const char** argv);
   
  private:
   typedef CommonTests __super;
