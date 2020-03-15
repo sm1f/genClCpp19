@@ -48,9 +48,9 @@ CXXFLAGS+= -Wno-unused-parameter -Wall  -g -O2 -MMD -Wno-unused-variable -std=c+
         -DIB_USE_STD_STRING -Wextra \
 	-MD -MP
 
-$(DBG_OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | MK_DBG_OBJ_DIR
+$(DBG_OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(SRC_HEADERS) | MK_DBG_OBJ_DIR
 	g++ $(CXXFLAGS) -DDEBUG -c -o $@ $<
-$(PRD_OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | MK_PRD_OBJ_DIR
+$(PRD_OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(SRC_HEADERS) | MK_PRD_OBJ_DIR
 	g++ $(CXXFLAGS) -c -o $@ $<
 
 $(DBG_APP_DIR)/%.exe: $(DBG_OBJ_ALL) | MK_DBG_APP_DIR

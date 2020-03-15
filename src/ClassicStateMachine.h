@@ -16,8 +16,5 @@ class ClassicStateMachineUtility : public CppBase
   typedef CppBase __super;
 };
 
-//template<InputEnum, StateEnum, OutputEnum>
-//  class Classic
-
 #endif //  __CLASSIC_STATE_MACHINE_H__
 
