@@ -1,0 +1,8 @@
+RD, Restaurant depot
+S,  sams club
+
+RDO, restaurant depot only
+SMO, sams only
+GSO, grossery store only
+RSO, restaurant depot then Sams
+SRO, Sams then RD
