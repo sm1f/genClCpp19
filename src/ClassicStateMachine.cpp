@@ -4,11 +4,6 @@
 
 #include "ClassicStateMachine.h"
 
-ClassicStateMachineUtility::ClassicStateMachineUtility()
-  : CppBase()
-{
-}
-
 template<typename InputEnum, typename StateEnum, typename OutputEnum>
 class ClassicStateMachineTransition {
  public:
@@ -33,4 +28,18 @@ class ClassicStateMachine {
   }
   
 };
+
+enum class MyState { State1, State2, State3 };
+enum class MyInput { In1, In2, In3 };
+enum class MyOutput { Out1, Out2, Out3 };
+
+class ClassicStateMachineTest : ClassicStateMachine<MyInput, MyState, MyOutput>
+{
+  
+};
+
+ClassicStateMachineUtility::ClassicStateMachineUtility()
+  : CppBase()
+{
+}
 
