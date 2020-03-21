@@ -21,3 +21,6 @@ alias maGW="make clean; make; apps/gw2020.exe;"
 
 alias mSM="make; apps/stateMachine.exe;"
 alias maSM="make clean; make; apps/stateMachine.exe;"
+
+alias mGame="make; apps/card.exe; cat genData/foo.ps"
+alias maGame="make clean; make; apps/card.exe; cat genData/foo.ps"
