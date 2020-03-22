@@ -29,11 +29,14 @@ class ClassicStateMachineOutput {
 template<typename KeyType, typename ValueType>
 class MyMap
 {
+  typedef map<KeyType, ValueType> _BaseMapType;
+  typedef typename map<KeyType, ValueType>::iterator _BaseMapType_it;
  public:
-  typedef std::map<KeyType, ValueType> _BaseMapType;
   _BaseMapType baseMap;
-  bool tryGetValue(KeyType key, ValueType& result2) {
-    _BaseMapType::iterator it = baseMap.find(key);
+
+  bool tryGetValue(KeyType key, ValueType& result2)
+  {
+    _BaseMapType_it it = baseMap.find(key);
     if (it == baseMap.end()) {
       return false;
     } else {
