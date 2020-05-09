@@ -4,13 +4,12 @@
 // replace CppBase with class name
 
 #include "CppBase.h"
+#include "Walker.h"
 
-CppBase::CppBase()
+CppBase* CppBase::walk(Walker* walker, CppBase* that, CppBase* other)
 {
-}
-
-CppBase::~CppBase()
-{
+  NYI("");
+  return that;
 }
 
 void CppBase::nyi(string file, string fn, int line, string text)

@@ -9,6 +9,8 @@
 
 #include "common.h"
 
+class Walker;
+
 //  --------- validate macros
 #define V_true(EXP) \
   { if (! (EXP)) { cerr << "Validate_true failed for exp: " # EXP << endl; } }
@@ -54,14 +56,16 @@
   }
 
 
-
+class CppBase;
 
 class CppBase
 {
  public:
-  CppBase();
-  virtual ~CppBase();
+  CppBase() {}
+  virtual ~CppBase() {}
 
+  virtual CppBase* walk(Walker* walker, CppBase* that, CppBase* other);
+  
   virtual void nyi(string file, string fn, int line, string text);
   virtual void nfi(string file, string fn, int line, string text);
 };
