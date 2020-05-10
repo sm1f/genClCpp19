@@ -24,3 +24,6 @@ alias maSM="make clean; make; apps/stateMachine.exe;"
 
 alias mGame="make; apps/card.exe; cat genData/foo.ps"
 alias maGame="make clean; make; apps/card.exe; cat genData/foo.ps"
+
+alias mD="make && apps/dodle.exe"
+alias maD="make clean && make && apps/dodle.exe"
