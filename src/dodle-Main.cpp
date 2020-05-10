@@ -2,14 +2,14 @@
 // All rights reserved.
 
 
-#include "HwSimV1.h"
+#include "Dodle.h"
 
 
 int main(int argc, const char** argv)
 {
-  cout << "hwSim V1" << endl;
+  cout << "Dodle V0.0" << endl;
 
-  HwSimV1* theApp = new HwSimV1();
+  Dodle* theApp = new Dodle();
   
   return theApp->runApp(argc, argv);
 }

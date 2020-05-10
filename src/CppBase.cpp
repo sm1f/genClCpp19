@@ -6,10 +6,23 @@
 #include "CppBase.h"
 #include "Walker.h"
 
-CppBase* CppBase::walk(Walker* walker, CppBase* that, CppBase* other)
+CppBase* CppBase::walk(Walker* walker, CppBase* other)
 {
-  NYI("");
-  return that;
+  return other;
+}
+
+void CppBase::walkAttrs(Walker* walker, CppBase* other)
+{
+}
+
+CppBase* CppBase::walkAlloc(Walker* walker, CppBase* other)
+{
+  return other;
+}
+
+CppBase* CppBase::walkFinish(Walker* walker, CppBase* other)
+{
+  return other;
 }
 
 void CppBase::nyi(string file, string fn, int line, string text)

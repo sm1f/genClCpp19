@@ -55,6 +55,10 @@ class Walker;
     std::cout << "TV " << __FILE__ << ":" << __LINE__ << " " # VAR << (VAR ? ": true" : ": false") << std::endl; } \
   }
 
+template<typename T>
+const char* getClassName(T) {
+  return typeid(T).name();
+}
 
 class CppBase;
 
@@ -64,11 +68,16 @@ class CppBase
   CppBase() {}
   virtual ~CppBase() {}
 
-  virtual CppBase* walk(Walker* walker, CppBase* that, CppBase* other);
+  virtual CppBase* walk(Walker* walker, CppBase* other);
+  virtual void walkAttrs(Walker* walker, CppBase* other);
+  virtual CppBase* walkAlloc(Walker* walker, CppBase* other);
+  virtual CppBase* walkFinish(Walker* walker, CppBase* other);
   
   virtual void nyi(string file, string fn, int line, string text);
   virtual void nfi(string file, string fn, int line, string text);
 };
+
+
 
 #endif //  __CppBase_H__
 
